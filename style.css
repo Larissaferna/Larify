@@ -1,0 +1,1258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #1a1a18 0%,
+            #111110 45%,
+            #090909 100%
+        );
+
+    font-family: "Nunito", sans-serif;
+
+    color: #f5f5f5;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.4) 0px,
+            rgba(255, 255, 255, 0.4) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    mix-blend-mode: overlay;
+}
+
+.pagina_entrada {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.texto_entrada {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+.texto_entrada p {
+
+    font-size: 19px;
+
+    color: #888;
+
+    letter-spacing: 0.2px;
+}
+
+
+.toca_discos {
+
+    position: relative;
+
+    width: min(850px, 88vw);
+
+    height: min(560px, 70vh);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #202022 0%,
+            #181819 45%,
+            #111112 100%
+        );
+
+    border-radius: 5px;
+
+    border: 1px solid #29292b;
+
+    box-shadow:
+
+        0 30px 80px rgba(0, 0, 0, 0.65),
+
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+
+        inset 0 -10px 30px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+}
+
+
+.toca_discos::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.16;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,0.015) 4px
+        );
+}
+
+.parafuso {
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #aaa,
+            #555 45%,
+            #222 75%
+        );
+
+    border: 1px solid #111;
+
+    box-shadow:
+        0 1px 3px rgba(0,0,0,0.7);
+
+    z-index: 2;
+}
+
+.parafuso_1 {
+    left: 18px;
+    top: 18px;
+}
+
+.parafuso_2 {
+    right: 18px;
+    top: 18px;
+}
+
+.parafuso_3 {
+    left: 18px;
+    bottom: 18px;
+}
+
+.parafuso_4 {
+    right: 18px;
+    bottom: 18px;
+}
+
+.prato {
+
+    position: absolute;
+
+    width: min(500px, 52vw);
+
+    height: min(500px, 52vw);
+
+    min-width: 350px;
+
+    min-height: 350px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-55%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #2d2d30 0%,
+            #222225 48%,
+            #171719 68%,
+            #101011 100%
+        );
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,0.6),
+
+        inset 0 0 30px rgba(255,255,255,0.035);
+
+    z-index: 1;
+}
+
+
+.borda_prato {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border:
+
+        4px solid #3c3c3f;
+
+    box-shadow:
+
+        inset 0 0 0 2px #111,
+
+        inset 0 0 0 4px #555,
+
+        0 0 0 1px #080808;
+}
+
+
+.marcas_prato {
+
+    position: absolute;
+
+    inset: 9px;
+
+    border-radius: 50%;
+
+    background:
+
+        repeating-radial-gradient(
+            circle,
+            transparent 0px,
+            transparent 17px,
+            rgba(255,255,255,0.035) 18px,
+            transparent 19px
+        );
+}
+
+
+.vinil {
+
+    position: absolute;
+
+    width: min(470px, 49vw);
+
+    height: min(470px, 49vw);
+
+    min-width: 330px;
+
+    min-height: 330px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-55%, -50%);
+
+    border-radius: 50%;
+
+    cursor: grab;
+
+    user-select: none;
+
+    touch-action: none;
+
+    background:
+
+        repeating-radial-gradient(
+            circle,
+            #070707 0px,
+            #070707 2px,
+            #101010 3px,
+            #080808 5px
+        );
+
+    box-shadow:
+
+        0 12px 28px rgba(0,0,0,0.75),
+
+        inset 0 0 30px rgba(255,255,255,0.04);
+
+    z-index: 2;
+}
+
+.vinil:active {
+
+    cursor: grabbing;
+}
+
+.vinil_detalhes {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,0.055) 37%,
+            transparent 52%
+        );
+
+    pointer-events: none;
+}
+
+
+.selo {
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #6198ed,
+            #3e78d8 65%,
+            #2857a5 100%
+        );
+
+    border: 2px solid #84b2ff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow:
+
+        inset 0 0 18px rgba(0,0,0,0.25),
+
+        0 0 1px #fff;
+}
+
+.selo span {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.selo small {
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.8;
+}
+
+.furo {
+
+    position: absolute;
+
+    width: 9px;
+
+    height: 9px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #0c0c0c;
+
+    box-shadow:
+        0 0 0 2px rgba(255,255,255,0.08);
+}
+
+
+.eixo {
+
+    position: absolute;
+
+    width: 15px;
+
+    height: 15px;
+
+    left: calc(50% - 7px);
+
+    top: calc(50% - 7px);
+
+    transform:
+        translate(-55%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #ddd,
+            #666,
+            #222
+        );
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.eixo_ponta {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 5px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #111;
+}
+
+
+.braco {
+
+    position: absolute;
+
+    width: 230px;
+
+    height: 14px;
+
+    right: 55px;
+
+    top: 105px;
+
+    transform-origin: 20px 50%;
+
+    transform:
+        rotate(32deg);
+
+    cursor: grab;
+
+    touch-action: none;
+
+    user-select: none;
+
+    z-index: 8;
+}
+
+.braco:active {
+
+    cursor: grabbing;
+}
+
+
+
+.base_braco {
+
+    position: absolute;
+
+    width: 48px;
+
+    height: 48px;
+
+    left: -20px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #777,
+            #333 45%,
+            #171717 75%
+        );
+
+    border: 2px solid #555;
+
+    box-shadow:
+
+        0 5px 12px rgba(0,0,0,0.55);
+}
+
+
+.base_braco_detalhe {
+
+    position: absolute;
+
+    width: 24px;
+
+    height: 24px;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border: 3px solid #666;
+
+    background: #222;
+}
+
+
+.haste_braco {
+
+    position: absolute;
+
+    left: 10px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 195px;
+
+    height: 8px;
+
+    border-radius: 8px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #d9d9d9 0%,
+            #888 35%,
+            #444 60%,
+            #c5c5c5 100%
+        );
+
+    box-shadow:
+
+        0 2px 5px rgba(0,0,0,0.6);
+}
+
+
+.cabeca_agulha {
+
+    position: absolute;
+
+    right: -7px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 38px;
+
+    height: 25px;
+
+    border-radius: 4px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #555,
+            #1c1c1c
+        );
+
+    border: 1px solid #666;
+
+    box-shadow:
+
+        0 3px 7px rgba(0,0,0,0.6);
+}
+
+
+.cabeca_agulha::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+
+    height: 18px;
+
+    left: -9px;
+
+    top: 3px;
+
+    background: #111;
+
+    border-radius: 3px;
+}
+
+
+.agulha {
+
+    position: absolute;
+
+    width: 6px;
+
+    height: 10px;
+
+    right: 2px;
+
+    bottom: -8px;
+
+    background: #0a0a0a;
+
+    transform:
+        rotate(18deg);
+
+    border-radius: 2px;
+}
+
+
+.controles {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 180px;
+
+    width: 120px;
+
+    height: 260px;
+
+    border-left: 1px solid #2d2d2f;
+
+    padding-left: 20px;
+
+    z-index: 4;
+}
+
+
+.led_ligado {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 4px;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #5d86cf;
+
+    box-shadow:
+
+        0 0 7px rgba(62,120,216,0.7);
+}
+
+
+.controle_volume {
+
+    position: relative;
+
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.botao_volume {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #555,
+            #242426 45%,
+            #0f0f10 100%
+        );
+
+    border: 2px solid #4a4a4c;
+
+    box-shadow:
+
+        0 5px 12px rgba(0,0,0,0.5),
+
+        inset 0 2px 3px rgba(255,255,255,0.08);
+}
+
+
+.risco_botao {
+
+    width: 3px;
+
+    height: 13px;
+
+    background: #aaa;
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 8px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 2px;
+}
+
+
+.marcacao_volume {
+
+    position: absolute;
+
+    font-size: 7px;
+
+    color: #777;
+
+    letter-spacing: 1px;
+}
+
+.volume_min {
+
+    left: -2px;
+
+    bottom: 8px;
+}
+
+.volume_max {
+
+    right: -2px;
+
+    bottom: 8px;
+}
+
+
+.controle_velocidade {
+
+    border-top: 1px solid #29292b;
+
+    padding-top: 13px;
+
+    text-align: center;
+}
+
+
+.velocidade_titulo {
+
+    font-size: 8px;
+
+    color: #777;
+
+    letter-spacing: 2px;
+}
+
+
+.velocidades {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 10px;
+}
+
+
+.velocidades span {
+
+    font-size: 10px;
+
+    color: #aaa;
+}
+
+.interruptor {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.interruptor_texto {
+
+    font-size: 7px;
+
+    color: #777;
+
+    letter-spacing: 1px;
+}
+
+
+.interruptor_botao {
+
+    width: 25px;
+
+    height: 34px;
+
+    background: #202022;
+
+    border-radius: 4px;
+
+    border: 1px solid #444;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.interruptor_luz {
+
+    width: 8px;
+
+    height: 14px;
+
+    background: #444;
+
+    border-radius: 3px;
+}
+
+.entradas {
+
+    margin-top: 22px;
+
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.entradas span {
+
+    font-size: 7px;
+
+    color: #666;
+
+    letter-spacing: 1px;
+}
+
+
+.play {
+
+    position: absolute;
+
+    right: 45px;
+
+    bottom: 35px;
+
+    width: 68px;
+
+    height: 68px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #5b92ed,
+            #3e78d8 65%,
+            #2857a5 100%
+        );
+
+    color: white;
+
+    font-size: 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding-left: 4px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+
+    box-shadow:
+
+        0 8px 20px rgba(0,0,0,0.5),
+
+        inset 0 1px 2px rgba(255,255,255,0.15);
+
+    z-index: 10;
+}
+
+
+.play:hover {
+
+    transform: scale(1.08);
+
+    background: #4c88ed;
+
+    box-shadow:
+
+        0 10px 25px rgba(62,120,216,0.25);
+}
+
+
+.play:active {
+
+    transform: scale(0.96);
+}
+
+
+.detalhe_metal {
+
+    position: absolute;
+
+    height: 3px;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #333,
+            #999,
+            #333
+        );
+
+    opacity: 0.55;
+}
+
+.detalhe_1 {
+
+    left: 25px;
+
+    bottom: 48px;
+
+    width: 90px;
+}
+
+.detalhe_2 {
+
+    left: 25px;
+
+    bottom: 40px;
+
+    width: 55px;
+}
+
+.detalhe_3 {
+
+    left: 145px;
+
+    bottom: 48px;
+
+    width: 35px;
+}
+
+
+.vinil.girando {
+
+    animation:
+        girar 2.5s linear infinite;
+}
+
+
+@keyframes girar {
+
+    from {
+
+        transform:
+            translate(-55%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+
+        transform:
+            translate(-55%, -50%)
+            rotate(360deg);
+    }
+}
+
+
+
+@media (max-width: 700px) {
+
+    .toca_discos {
+
+        width: 94vw;
+
+        height: 480px;
+    }
+
+
+    .prato,
+    .vinil {
+
+        width: 360px;
+
+        height: 360px;
+
+        min-width: 0;
+
+        min-height: 0;
+    }
+
+
+    .selo {
+
+        width: 95px;
+
+        height: 95px;
+    }
+
+
+    .braco {
+
+        right: 25px;
+
+        top: 80px;
+
+        width: 170px;
+    }
+
+
+    .haste_braco {
+
+        width: 140px;
+    }
+
+
+    .controles {
+
+        right: 12px;
+
+        width: 95px;
+    }
+
+
+    .play {
+
+        right: 20px;
+
+        bottom: 20px;
+
+        width: 60px;
+
+        height: 60px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .toca_discos {
+
+        height: 420px;
+    }
+
+
+    .prato,
+    .vinil {
+
+        width: 310px;
+
+        height: 310px;
+    }
+
+
+    .braco {
+
+        right: 10px;
+
+        top: 65px;
+
+        width: 135px;
+    }
+
+
+    .haste_braco {
+
+        width: 105px;
+    }
+
+
+    .controles {
+
+        right: 5px;
+
+        top: 160px;
+
+        transform: scale(0.8);
+
+        transform-origin: top right;
+    }
+
+
+    .texto_entrada {
+
+        top: 25px;
+    }
+
+
+    .texto_entrada p {
+
+        font-size: 12px;
+    }
+}
+
+
+.efeito_tontura {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    background: rgba(80, 255, 80, 0.85);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity .25s ease;
+}
+
+.efeito_tontura.ativo {
+    opacity: 1;
+}
+
+.enjoo_larissa {
+    font-size: 75px;
+
+    animation:
+        girarEnjoo .35s linear infinite,
+        aparecerEnjoo .4s ease;
+}
+
+@keyframes girarEnjoo {
+
+    0% {
+        transform: rotate(-12deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(12deg) scale(1.15);
+    }
+
+    100% {
+        transform: rotate(-12deg) scale(1);
+    }
+}
+
+@keyframes aparecerEnjoo {
+
+    from {
+        transform: scale(.2);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

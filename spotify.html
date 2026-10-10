@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Larify</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="spotify.css">
+</head>
+
+<body>
+<div id="larissaPixel" class="larissa_pixel">
+
+    <img
+        id="larissaSprite"
+        src="imagens/larissa/larissa_idle.png"
+        alt="Larissa pixel art"
+        draggable="false"
+    >
+
+</div>
+
+<div id="falaLarissa" class="fala_larissa"></div>
+
+<div id="tutorialLarissa" class="tutorial_larissa">
+
+    <button id="pularTutorial">
+        Pular tutorial
+    </button>
+
+</div>
+
+<div id="efeitoTontura" class="efeito_tontura">
+    <div class="enjoo_larissa"></div>
+</div>
+
+    <div class="aplicativo">
+
+
+        <aside class="menu_lateral">
+
+            <div class="logo_larissa">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Larify</span>
+            </div>
+
+            <nav>
+
+                <a class="ativo link_menu" href="#inicio" data-target="inicio">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Início</span>
+                </a>
+
+                <a class="link_menu" href="#buscar" data-action="busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Buscar</span>
+                </a>
+
+                <a class="link_menu" href="#biblioteca" data-target="biblioteca">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Sua Biblioteca</span>
+                </a>
+
+            </nav>
+
+
+            <div class="biblioteca">
+
+                <h3>Sua biblioteca</h3>
+
+                <button>
+                    <i class="fa-solid fa-plus"></i>
+                    Criar playlist
+                </button>
+
+                <div class="lista_playlists">
+
+                    <div class="item_playlist" data-target="projetos">
+
+                        <div class="capa"><img class="imagem_capa_playlist" src="curtida.jpg" alt="Capa Músicas Curtidas"></div>
+
+                        <div>
+                            <strong>Músicas Curtidas</strong>
+                            <span>Playlist</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="item_playlist" data-target="sobre-mim">
+
+                        <div class="capa"><img class="imagem_capa_playlist" src="popbrasil.jpeg" alt="Capa Minha Playlist"></div>
+
+                        <div>
+                            <strong>Minha Playlist</strong>
+                            <span>Playlist</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="item_playlist" data-target="habilidades">
+
+                        <div class="capa"><img class="imagem_capa_playlist" src="baixo.jpg" alt="Capa Pop Hits"></div>
+
+                        <div>
+                            <strong>Pop Hits</strong>
+                            <span>Playlist</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+
+        <main class="conteudo_principal">
+
+
+            <header class="barra_superior">
+
+                <div class="navegacao">
+
+                    <button>
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="busca">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="O que você quer ouvir?"
+                    >
+
+                </div>
+
+
+                <div class="perfil">
+
+        
+
+                    <button
+                        class="botao_tema"
+                        id="botaoTema"
+                        aria-label="Ativar modo claro"
+                        title="Modo claro"
+                    >
+
+                        <span class="icone_tema icone_sol">
+                            <i class="fa-solid fa-sun"></i>
+                        </span>
+
+                        <span class="icone_tema icone_lua">
+                            <i class="fa-solid fa-moon"></i>
+                        </span>
+
+                    </button>
+
+
+                    <button class="sino">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                    </button>
+
+
+                    <div class="avatar_larissa">
+                        L
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <section class="destaque" id="inicio">
+
+                <div class="conteudo_destaque">
+
+                    <span class="titulo_pequeno">
+                        PLAYLIST EM DESTAQUE
+                    </span>
+
+                    <h1>
+                        Os melhores projetos<br>
+                        para você.
+                    </h1>
+
+                    <p>
+                        Descubra meus projetos criados, desde sites,
+                        sistemas e aplicativos, todos desenvolvidos
+                        com dedicação e atenção aos detalhes.
+                    </p>
+
+
+                    <div class="botoes_destaque">
+
+                        <button class="botao_ver_agora" data-target="projetos">
+
+                            <i class="fa-solid fa-play"></i>
+
+                            Veja agora
+
+                        </button>
+
+
+                        <button class="botao_mais">
+
+                            <i class="fa-solid fa-ellipsis"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="arte_destaque">
+
+                    <div class="circulo circulo_um"></div>
+
+                    <div class="circulo circulo_dois"></div>
+
+                    <div class="circulo circulo_tres"></div>
+
+                    <i class="fa-solid fa-music"></i>
+
+                </div>
+
+            </section>
+
+
+
+            <div class="filtros">
+
+                <button class="selecionado">
+                    Tudo
+                </button>
+
+                <button>
+                    Músicas
+                </button>
+
+                <button>
+                    Podcasts
+                </button>
+
+            </div>
+
+
+    
+
+            <section class="playlists_rapidas" id="biblioteca">
+
+
+                <div
+                    class="cartao_rapido cartao_projeto" data-target="projetos"
+                    data-project="Músicas Curtidas"
+                    data-description="Uma coleção de projetos e referências que representam minhas ideias favoritas."
+                >
+
+                    <div class="capa_rapida roxo"><img class="imagem_capa_rapida" src="curtida.jpg" alt="Músicas Curtidas"></div>
+
+                    <span>
+                        Músicas Curtidas
+                    </span>
+
+                    <button>
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="cartao_rapido cartao_projeto" data-target="carreira"
+                    data-project="Pop Brasil"
+                    data-description="Projeto visual com foco em música, identidade e experiência de interface."
+                >
+
+                    <div class="capa_rapida vermelho">
+
+                        <img
+                            class="imagem_capa_rapida"
+                            src="popbrasil.jpeg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <span>
+                        Pop Brasil
+                    </span>
+
+                    <button>
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="cartao_rapido cartao_projeto" data-target="habilidades"
+                    data-project="Night Vibes"
+                    data-description="Conceito de interface com atmosfera noturna e foco em uma experiência moderna."
+                >
+
+                    <div class="capa_rapida azul"><img class="imagem_capa_rapida" src="noite.avif" alt="Night Vibes"></div>
+
+                    <span>
+                        Night Vibes
+                    </span>
+
+                    <button>
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="cartao_rapido cartao_projeto" data-target="projetos"
+                    data-project="JARVIS"
+                    data-description="Meu projeto de assistente virtual para desktop, inspirado em uma experiência de assistente pessoal."
+                >
+
+                    <div class="capa_rapida laranja">
+
+                        <img
+                            class="imagem_capa_rapida"
+                            src="jarvis.webp"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <span>
+                        Hits do Momento
+                    </span>
+
+                    <button>
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="cartao_rapido cartao_projeto" data-target="sobre-mim"
+                    data-project="Rock Classics"
+                    data-description="Projeto relacionado a música e visual de uma interface inspirada em rock."
+                >
+
+                    <div class="capa_rapida verde">
+
+                        <img
+                            class="imagem_capa_rapida"
+                            src="baixo.jpg"
+                            alt=""
+                        >
+
+                    </div>
+
+                    <span>
+                        Rock Classics
+                    </span>
+
+                    <button>
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="cartao_rapido cartao_projeto" data-target="contato"
+                    data-project="Chill & Relax"
+                    data-description="Conceito de interface minimalista para uma experiência mais tranquila e imersiva."
+                >
+
+                    <div class="capa_rapida rosa">
+
+                        <img
+                            class="imagem_capa_rapida"
+                            src="relax.jpg"
+                            alt="Chill & Relax"
+                        >
+
+                    </div>
+
+                    <span>
+                        Chill & Relax
+                    </span>
+
+                    <button>
+
+                        <i class="fa-solid fa-play"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="recomendacoes">
+
+                <div class="cabecalho_secao">
+
+                    <div>
+
+                        <span>
+                            Música sem parar baseada no que você gosta.
+                        </span>
+
+                        <h2>
+                            Estações recomendadas
+                        </h2>
+
+                    </div>
+
+                    <button>
+                        Mostrar tudo
+                    </button>
+
+                </div>
+
+
+                <div class="grade_musicas">
+
+
+                    <article
+                        class="cartao_musica cartao_projeto" data-target="projetos"
+                        data-project="Projetos"
+                        data-description="Meus maiores projetos de desenvolvimento web, sistemas e aplicativos."
+                    >
+                        <div class="capa_album capa_um">
+                            <img class="imagem_capa_album" src="jarvis.webp" alt="Capa Projetos">
+
+                            <button>
+
+                                <i class="fa-solid fa-play">
+                                    
+                                </i>
+
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Projetos
+                        </h3>
+
+                        <p>
+                            Os maiores projetos
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="cartao_musica cartao_projeto" data-target="carreira"
+                        data-project="Today's Top Hits"
+                        data-description="Projetos em destaque do meu portfólio."
+                    >
+
+                        <div class="capa_album capa_dois">
+                            <img class="imagem_capa_album" src="popbrasil.jpeg" alt="Capa Carreira">
+
+                            <button>
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Carreira Atualmente
+                        </h3>
+
+                        <p>
+                            Como está minha carreira atualmente.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="cartao_musica cartao_projeto" data-target="habilidades"
+                        data-project="Late Night Vibes"
+                        data-description="Experimentos visuais com uma estética noturna."
+                    >
+
+                        <div class="capa_album capa_tres">
+                            <img class="imagem_capa_album" src="baixo.jpg" alt="Capa Habilidades">
+
+                            <button>
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Habilidades
+                        </h3>
+
+                        <p>
+                            Minhas habilidades e competências.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="cartao_musica cartao_projeto" data-target="sobre-mim"
+                        data-project="Rock Legends"
+                        data-description="Projetos com referências visuais fortes e marcantes."
+                    >
+
+                        <div class="capa_album capa_quatro">
+                            <img class="imagem_capa_album" src="relax.jpg" alt="Capa Sobre Mim">
+
+                            <button>
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </button>
+
+                        </div>
+
+                        <h3>
+                           Um pouco sobre mim
+                        </h3>
+
+                        <p>
+                            Conheça um pouco mais sobre mim.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="cartao_musica cartao_projeto" data-target="laboratorio"
+                        data-project="Laboratório Criativo"
+                        data-description="Interfaces com movimento, interação e energia."
+                    >
+
+                        <div class="capa_album capa_cinco">
+                            <img class="imagem_capa_album" src="jarvis.webp" alt="Capa Contato">
+
+                            <button>
+
+                                <i class="fa-solid fa-play"></i>
+
+                            </button>
+
+                        </div>
+
+                        <h3>
+                            Laboratório criativo
+                        </h3>
+
+                        <p>
+                            Um espaço para testar ideias novas e projetos diferentes.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section class="secao_portfolio" id="projetos">
+                <div class="titulo_secao_portfolio"><span>MEU PORTFÓLIO</span><h2>Meus projetos</h2><p>Alguns dos projetos que desenvolvi e que fazem parte da minha evolução na tecnologia.</p></div>
+                <div class="grade_conteudo_portfolio">
+                    <article class="cartao_info_portfolio projeto_destaque"><div class="imagem_cartao_portfolio"><img src="jarvis.webp" alt="JARVIS"></div><div><span>PROJETO EM DESTAQUE</span><h3>JARVIS</h3><p>Meu projeto de assistente virtual para desktop, inspirado em uma experiência de assistente pessoal.</p><a href="https://github.com/Larissaferna"> <button class="botao_secao" type="button">Ver projeto</button>
+</a></div></article>
+                    <article class="cartao_info_portfolio"><span>DESENVOLVIMENTO</span><h3>Projetos web</h3><p>Sites e interfaces criados para praticar desenvolvimento, design e experiência do usuário.</p></article>
+                    <article class="cartao_info_portfolio"><span>PRÓXIMO PASSO</span><h3>Novos projetos</h3><p>Este espaço pode receber novos projetos conforme meu portfólio crescer.</p></article>
+                </div>
+            </section>
+
+            <section class="secao_portfolio" id="carreira"><div class="titulo_secao_portfolio"><span>MINHA JORNADA</span><h2>Carreira atualmente</h2><p>Um pouco sobre onde estou na minha jornada profissional e acadêmica.</p></div><div class="linha_tempo"><article class="cartao_timeline"><strong>01</strong><h3>Formação</h3><p>Ensino médio integrado a uma formação técnica na área de tecnologia.</p></article><article class="cartao_timeline"><strong>02</strong><h3>Aprendizado</h3><p>Desenvolvimento contínuo em programação, criação de sites e projetos práticos.</p></article><article class="cartao_timeline"><strong>03</strong><h3>Próximos objetivos</h3><p>Continuar criando projetos e transformar conhecimento em experiência profissional.</p></article></div></section>
+
+            <section class="secao_portfolio" id="habilidades"><div class="titulo_secao_portfolio"><span>O QUE EU FAÇO</span><h2>Habilidades</h2><p>Conhecimentos e competências que venho desenvolvendo.</p></div><div class="grade_habilidades"><div class="item_habilidade"><i class="fa-brands fa-html5"></i><h3>HTML & CSS</h3><p>Criação de páginas e interfaces.</p></div><div class="item_habilidade"><i class="fa-brands fa-python"></i><h3>Python</h3><p>Programação e desenvolvimento de projetos.</p></div><div class="item_habilidade"><i class="fa-solid fa-code"></i><h3>Programação</h3><p>Lógica, projetos e resolução de problemas.</p></div><div class="item_habilidade"><i class="fa-solid fa-palette"></i><h3>Design de interfaces</h3><p>Foco em visual, organização e experiência.</p></div></div></section>
+
+            <section class="secao_portfolio" id="sobre-mim"><div class="titulo_secao_portfolio"><span>ALÉM DO CÓDIGO</span><h2>Um pouco sobre mim</h2><p>Conheça a pessoa por trás dos projetos.</p></div><div class="caixa_sobre"><div class="avatar_sobre">L</div><div><h3>Oi, eu sou a Larissa.</h3><p>Sou uma pessoa curiosa, organizada e apaixonada por tecnologia. Gosto de transformar ideias em projetos visuais e funcionais e estou sempre buscando aprender algo novo.</p><div class="tags_sobre"><span>💻 Tecnologia</span><span>🎨 Criatividade</span><span>🚀 Aprendizado</span></div></div></div></section>
+
+            
+            <section class="secao_portfolio" id="laboratorio">
+                <div class="titulo_secao_portfolio">
+                    <span>ESPAÇO DE IDEIAS</span>
+                    <h2>Laboratório criativo</h2>
+                    <p>Um cantinho do portfólio para mostrar ideias que ainda estão saindo do papel.</p>
+                </div>
+
+                <div class="caixa_laboratorio">
+                    <div class="icone_laboratorio">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <span class="etiqueta_laboratorio">PROJETO EM ANDAMENTO</span>
+                        <h3>Larify Lab</h3>
+                        <p>
+                            Uma área onde posso testar novas ideias de sites, interfaces e pequenos sistemas.
+                            A proposta é mostrar que nem todo projeto precisa estar perfeito para fazer parte da minha evolução.
+                        </p>
+
+                        <div class="tags_sobre">
+                            <span>💡 Ideias</span>
+                            <span>💻 Tecnologia</span>
+                            <span>🎨 Interface</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao_portfolio" id="contato"><div class="titulo_secao_portfolio"><span>VAMOS CONVERSAR</span><h2>Contato</h2><p>Uma área reservada para colocar seus contatos, redes e links profissionais.</p></div><div class="grade_contato"><a class="cartao_contato" href="mailto:larissafernandesleandro@gmail.com"><i class="fa-solid fa-envelope"></i><div><strong>E-mail</strong><span>larissafernandesleandro@gmail.com</span></div></a><a class="cartao_contato" href="https://github.com/Larissaferna" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i><div><strong>GitHub</strong><span>github.com/Larissaferna</span></div></a><a class="cartao_contato" href="#" data-placeholder-link><i class="fa-brands fa-linkedin"></i><div><strong>LinkedIn</strong><span>https://www.linkedin.com/in/larissa-fernandes-leandro-ba515b374/</span></div></a></div></section>
+
+
+            <footer class="rodape_larissa">
+                <div class="rodape_conteudo">
+                    <div>
+                        <span class="rodape_marca">LARISSA FERNANDES LEANDRO</span>
+                        <h2>Obrigada por visitar meu portfólio</h2>
+                        <p>Este portfólio faz parte da minha jornada de aprendizado em tecnologia.</p>
+                    </div>
+
+                    <div class="rodape_links">
+                        <a href="mailto:larissafernandesleandro@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>larissafernandesleandro@gmail.com</span>
+                        </a>
+
+                        <a href="https://github.com/Larissaferna" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                            <span>github.com/Larissaferna</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/larissa-fernandes-leandro-ba515b374/" target="_blank" rel="noopener noreferrer">
+                             <i class="fa-brands fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rodape_final">
+                    <span>Feito por Larissa</span>
+                    <span>2026</span>
+                </div>
+            </footer>
+
+        </main>
+
+
+   
+
+        <aside class="painel_direito">
+
+            <div class="cabecalho_direito">
+
+                <div>
+
+                    <button class="aba aba_ativa">
+                        Fila
+                    </button>
+
+                    <button class="aba">
+                        Tocado recentemente
+                    </button>
+
+                </div>
+
+                <button>
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <section class="tocando_agora">
+
+                <h3>
+                    Tocando agora
+                </h3>
+
+                <div class="musica_atual">
+
+                    <div class="capa_musica"></div>
+
+                    <div>
+
+                        <h4>
+                            The Man
+                        </h4>
+
+                        <p>
+                            Taylor Swift
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <div class="cartao_jam">
+
+                <i class="fa-solid fa-users"></i>
+
+                <p>
+                    Convide seus amigos para verem meu portfolio juntos.
+                </p>
+
+                <button>
+                    Iniciar uma Jam
+                </button>
+
+            </div>
+
+
+            <section class="proximas_musicas">
+
+                <h3>
+                    Próximas músicas
+                </h3>
+
+
+                <div class="proxima_musica">
+
+                    <div class="capa_pequena cor_um"></div>
+
+                    <div>
+
+                        <strong>
+                            Bohemian Rhapsody
+                        </strong>
+
+                        <span>
+                            Queen
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proxima_musica">
+
+                    <div class="capa_pequena cor_dois"></div>
+
+                    <div>
+
+                        <strong>
+                            Feels
+                        </strong>
+
+                        <span>
+                            Calvin Harris
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proxima_musica">
+
+                    <div class="capa_pequena cor_tres"></div>
+
+                    <div>
+
+                        <strong>
+                            My own worst enemy
+                        </strong>
+
+                        <span>
+                            Lit
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="proxima_musica">
+
+                    <div class="capa_pequena cor_quatro"></div>
+
+                    <div>
+
+                        <strong>
+                            Born This Way
+                        </strong>
+
+                        <span>
+                            Lady Gaga
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+    </div>
+
+
+  
+
+    <div class="barra_player">
+
+
+        <div class="musica_player">
+
+            <div class="capa_player"></div>
+
+            <div>
+
+                <strong>
+                    The Man
+                </strong>
+
+                <span>
+                    Taylor Swift
+                </span>
+
+            </div>
+
+            <button>
+
+                <i class="fa-regular fa-circle-plus"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="controles">
+
+            <div class="botoes_player">
+
+                <button>
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+
+                <button class="pausar">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+
+                <button>
+                    <i class="fa-solid fa-repeat"></i>
+                </button>
+
+            </div>
+
+
+            <div class="progresso">
+
+                <span class="tempo_atual">
+                    1:12
+                </span>
+
+                <div class="barra_progresso">
+
+                    <div class="progresso_atual"></div>
+
+                </div>
+
+                <span class="duracao">
+                    3:25
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="volume_player">
+
+            <button>
+                <i class="fa-solid fa-microphone"></i>
+            </button>
+
+            <button>
+                <i class="fa-solid fa-list"></i>
+            </button>
+
+            <button>
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+
+            <div class="barra_volume">
+
+                <div></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="modal_projeto"
+        id="modalProjeto"
+        aria-hidden="true"
+    >
+
+        <div
+            class="fundo_modal_projeto"
+            data-close-project
+        ></div>
+
+
+        <div
+            class="caixa_modal_projeto"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="projectModalTitle"
+        >
+
+            <button
+                class="fechar_modal_projeto"
+                id="fecharModalProjeto"
+                aria-label="Fechar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <span class="rotulo_modal_projeto">
+                PROJETO DO PORTFÓLIO
+            </span>
+
+
+            <h2 id="tituloModalProjeto">
+                Projeto
+            </h2>
+
+
+            <p id="descricaoModalProjeto">
+                Descrição do projeto.
+            </p>
+
+
+            <div class="acoes_modal_projeto">
+
+                <button
+                    class="botao_principal_modal"
+                    id="acaoModalProjeto"
+                >
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    Ver projeto
+
+                </button>
+
+
+                <button
+                    class="botao_secundario_modal"
+                    data-close-project
+                >
+                    Fechar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <audio
+        id="portfolioAudio"
+        preload="metadata"
+    ></audio>
+
+
+
+
+    <script src="spotify.js"></script>
+
+</body>
+
+</html>

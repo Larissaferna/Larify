@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Larify</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pagina_entrada">
+
+        <div class="texto_entrada">
+            <p>Clique no play para conhecer meu portfólio.</p>
+        </div>
+
+
+        <div class="toca_discos">
+
+
+            <span class="parafuso parafuso_1"></span>
+            <span class="parafuso parafuso_2"></span>
+            <span class="parafuso parafuso_3"></span>
+            <span class="parafuso parafuso_4"></span>
+
+
+            <div class="prato">
+
+                <div class="borda_prato"></div>
+
+                <div class="marcas_prato"></div>
+
+            </div>
+
+
+
+            <div class="vinil" id="vinil">
+
+                <div class="vinil_detalhes"></div>
+
+                <div class="selo">
+
+                    <span>LARIFY</span>
+
+                    <small>PORTFÓLIO</small>
+
+                </div>
+
+                <div class="furo"></div>
+
+            </div>
+
+            <div class="braco" id="braco">
+
+                <div class="base_braco">
+
+                    <div class="base_braco_detalhe"></div>
+
+                </div>
+
+                <div class="haste_braco"></div>
+
+                <div class="cabeca_agulha">
+
+                    <div class="agulha"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="controles">
+
+
+                <div class="led_ligado"></div>
+
+
+                <div class="controle_volume">
+
+                    <span class="marcacao_volume volume_min">
+                        MIN
+                    </span>
+
+                    <div class="botao_volume">
+
+                        <div class="risco_botao"></div>
+
+                    </div>
+
+                    <span class="marcacao_volume volume_max">
+                        MAX
+                    </span>
+
+                </div>
+
+                <div class="controle_velocidade">
+
+                    <span class="velocidade_titulo">
+                        SPEED
+                    </span>
+
+                    <div class="velocidades">
+
+                        <span>42</span>
+                        <span>67</span>
+
+                    </div>
+
+                </div>
+
+                <div class="interruptor">
+
+                    <span class="interruptor_texto">
+                        POWER
+                    </span>
+
+                    <div class="interruptor_botao">
+
+                        <div class="interruptor_luz"></div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="entradas">
+
+                    <span>PHONO</span>
+                    <span>USB</span>
+
+                </div>
+
+            </div>
+
+            <button
+                class="play"
+                id="botaoEntrar"
+                aria-label="Entrar no portfólio"
+            >
+                <span>▶</span>
+            </button>
+            <div class="detalhe_metal detalhe_1"></div>
+            <div class="detalhe_metal detalhe_2"></div>
+            <div class="detalhe_metal detalhe_3"></div>
+
+        </div>
+
+    </main>
+
+    <audio id="musicaVinil" src="leberch-calm-piano-589818.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
